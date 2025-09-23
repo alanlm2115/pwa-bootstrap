@@ -1,135 +1,137 @@
-<!-- Navbar (Freelancer adaptada) -->
-<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+<!-- Navbar accesible -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav" aria-label="Navegación principal">
   <div class="container">
     <a class="navbar-brand" routerLink="/">Mi PWA</a>
     <button
       class="navbar-toggler text-uppercase fw-bold bg-primary text-white rounded"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive"
-      aria-expanded="false"
-      aria-label="Alternar navegación"
-    >
+      type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alternar navegación">
       Menú <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a
-            class="nav-link py-3 px-0 px-lg-3 rounded"
-            routerLink="/"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            aria-current="page"
-            >Inicio</a
-          >
+          <a class="nav-link py-3 px-0 px-lg-3 rounded"
+             routerLink="/"
+             routerLinkActive="active"
+             #homeRla="routerLinkActive"
+             [routerLinkActiveOptions]="{ exact: true }"
+             [attr.aria-current]="homeRla.isActive ? 'page' : null">
+            Inicio
+          </a>
         </li>
-       <li class="nav-item mx-0 mx-lg-1">
-  <a class="nav-link py-3 px-0 px-lg-3 rounded"
-     routerLink="/ui" routerLinkActive="active">UI</a>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded"
+             routerLink="/ui"
+             routerLinkActive="active"
+             #uiRla="routerLinkActive"
+             [attr.aria-current]="uiRla.isActive ? 'page' : null">
+            UI
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Masthead -->
-<header class="masthead bg-primary text-white text-center">
-  <div class="container d-flex align-items-center flex-column">
-    <img
-      class="masthead-avatar mb-5"
-      src="assets/template/assets/img/avataaars.svg"
-      alt="Avatar ilustrativo del template Freelancer"
-    />
+<main id="main-content" tabindex="-1">
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <img
+        class="masthead-avatar mb-5"
+        src="assets/template/assets/img/avataaars.svg"
+        alt="Avatar ilustrativo del template Freelancer"
+      />
 
-    <h1 class="masthead-heading text-uppercase mb-0">Mi PWA Offline</h1>
+      <h1 class="masthead-heading text-uppercase mb-0">Mi PWA Offline</h1>
 
-    <div class="divider-custom divider-light" role="presentation">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon">★</div>
-      <div class="divider-custom-line"></div>
+      <div class="divider-custom divider-light" role="presentation">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">★</div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <p class="masthead-subheading fw-light mb-0">
+        Angular 20 · Bootstrap · PWA · Notificaciones · GitHub Pages
+      </p>
     </div>
+  </header>
 
-    <p class="masthead-subheading fw-light mb-0">
-      Angular 20 · Bootstrap · PWA · Notificaciones · GitHub Pages
-    </p>
-  </div>
-</header>
+  <!-- Portfolio Grid -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
 
-<!-- Portfolio Grid -->
-<section class="page-section portfolio" id="portfolio">
-  <div class="container">
-    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-
-    <div class="divider-custom" role="presentation">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon">★</div>
-      <div class="divider-custom-line"></div>
-    </div>
-
-    <div class="row justify-content-center g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/cabin.png" alt="Proyecto Cabin" />
-        </div>
+      <div class="divider-custom" role="presentation">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">★</div>
+        <div class="divider-custom-line"></div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/cake.png" alt="Proyecto Cake" />
+      <div class="row justify-content-center g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/cabin.png" alt="Proyecto Cabin" />
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/circus.png" alt="Proyecto Circus" />
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/cake.png" alt="Proyecto Cake" />
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/game.png" alt="Proyecto Game" />
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/circus.png" alt="Proyecto Circus" />
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/safe.png" alt="Proyecto Safe" />
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/game.png" alt="Proyecto Game" />
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="portfolio-item mx-auto">
-          <img class="img-fluid" src="assets/template/assets/img/portfolio/submarine.png" alt="Proyecto Submarine" />
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/safe.png" alt="Proyecto Safe" />
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- About -->
-<section class="page-section bg-primary text-white mb-0" id="about">
-  <div class="container">
-    <h2 class="page-section-heading text-center text-uppercase text-white">Acerca</h2>
-
-    <div class="divider-custom divider-light" role="presentation">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon">★</div>
-      <div class="divider-custom-line"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <p class="lead">
-          Esta Home está integrada con el layout del template Freelancer. En los próximos pasos activaremos PWA offline,
-          notificaciones y el deploy en GitHub Pages.
-        </p>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto">
+            <img class="img-fluid" src="assets/template/assets/img/portfolio/submarine.png" alt="Proyecto Submarine" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- About -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white">Acerca</h2>
+
+      <div class="divider-custom divider-light" role="presentation">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">★</div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead">
+            Esta Home está integrada con el layout del template Freelancer. En los próximos pasos
+            activaremos PWA offline, notificaciones y el deploy en GitHub Pages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <!-- Footer -->
 <footer class="footer text-center">
