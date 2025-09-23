@@ -1,0 +1,16 @@
+{
+  "name": "Mi PWA",
+  "short_name": "MiPWA",
+  "description": "Angular 20 + Bootstrap + PWA (Freelancer template)",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1abc9c",
+  "theme_color": "#1abc9c",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/maskable-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/maskable-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
