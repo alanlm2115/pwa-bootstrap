@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:pwa-bootstrap": "node dist/pwa-bootstrap/server/server.mjs"
+    "serve:ssr:pwa-bootstrap": "node dist/pwa-bootstrap/server/server.mjs",
+    "build:prod": "ng build -c production",
+    "build:gh": "ng build -c production --base-href \"/pwa-bootstrap/\" --deploy-url \"/pwa-bootstrap/\"",
+    "postbuild:gh": "node -e \"const fs=require('fs'),p='./dist/pwa-bootstrap/browser/';fs.copyFileSync(p+'index.html',p+'404.html')\""
   },
   "prettier": {
     "printWidth": 100,
