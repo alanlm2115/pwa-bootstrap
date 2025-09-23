@@ -1,0 +1,115 @@
+<!-- Navbar (reutilizada/adaptada) -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Mi PWA</a>
+    <button
+      class="navbar-toggler text-uppercase fw-bold bg-primary text-white rounded"
+      type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alternar navegación">
+      Menú <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded"
+             routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded"
+             routerLink="/ui" routerLinkActive="active">UI</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Cabecera para compensar navbar fixed -->
+<header class="bg-primary text-white text-center" style="padding-top:6rem;padding-bottom:2rem">
+  <div class="container">
+    <h1 class="text-uppercase m-0">Demo de Componentes</h1>
+    <p class="lead m-0">Navbar · Botones · Grid/Cards</p>
+  </div>
+</header>
+
+<!-- 1) Botones -->
+<section class="page-section" aria-labelledby="ui-buttons-title">
+  <div class="container">
+    <h2 id="ui-buttons-title" class="text-center text-uppercase text-secondary mb-4">Botones</h2>
+
+    <div class="text-center d-flex flex-wrap gap-2 justify-content-center">
+      <button type="button" class="btn btn-primary">Primario</button>
+      <button type="button" class="btn btn-outline-primary">Outline</button>
+      <button type="button" class="btn btn-success">Éxito</button>
+      <button type="button" class="btn btn-danger">Peligro</button>
+      <button type="button" class="btn btn-warning">Alerta</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-secondary" disabled aria-disabled="true">Deshabilitado</button>
+    </div>
+
+    <div class="text-center mt-3 d-flex flex-wrap gap-2 justify-content-center">
+      <button type="button" class="btn btn-primary btn-lg">Grande</button>
+      <button type="button" class="btn btn-outline-primary btn-sm">Pequeño</button>
+    </div>
+  </div>
+</section>
+
+<!-- 2) Grid / Cards -->
+<section class="page-section" aria-labelledby="ui-cards-title">
+  <div class="container">
+    <h2 id="ui-cards-title" class="text-center text-uppercase text-secondary mb-4">Grid / Cards</h2>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/template/assets/img/portfolio/cabin.png" class="card-img-top" alt="Card Cabin" />
+          <div class="card-body">
+            <h5 class="card-title">Cabin</h5>
+            <p class="card-text">Ejemplo de card con imagen del template.</p>
+            <a class="btn btn-primary" href="#" role="button">Acción</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/template/assets/img/portfolio/cake.png" class="card-img-top" alt="Card Cake" />
+          <div class="card-body">
+            <h5 class="card-title">Cake</h5>
+            <p class="card-text">Otra card para mostrar el grid responsive.</p>
+            <a class="btn btn-outline-primary" href="#" role="button">Acción</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/template/assets/img/portfolio/circus.png" class="card-img-top" alt="Card Circus" />
+          <div class="card-body">
+            <h5 class="card-title">Circus</h5>
+            <p class="card-text">Tercer ejemplo con alturas iguales.</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-success" href="#" role="button">OK</a>
+              <a class="btn btn-outline-secondary" href="#" role="button">Más info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.row -->
+  </div>
+</section>
+
+<!-- 3) CTA simple -->
+<section class="page-section bg-primary text-white text-center" aria-labelledby="ui-cta-title">
+  <div class="container">
+    <h2 id="ui-cta-title" class="text-uppercase m-0">Listo</h2>
+    <p class="lead m-0">Navbar, Botones y Cards funcionando y responsive.</p>
+  </div>
+</section>
+
+<!-- Footer mini -->
+<footer class="footer text-center">
+  <div class="container">
+    <p class="lead m-0">© {{ year }}</p>
+  </div>
+</footer>
