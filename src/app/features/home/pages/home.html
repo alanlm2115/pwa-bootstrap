@@ -56,6 +56,19 @@
       <p class="masthead-subheading fw-light mb-0">
         Angular 20 · Bootstrap · PWA · Notificaciones · GitHub Pages
       </p>
+
+      <!-- 🔔 Botones de notificaciones -->
+      <div class="d-flex flex-wrap gap-2 justify-content-center mt-4">
+        <button type="button" class="btn btn-outline-light" (click)="askPermission()">
+          Permitir notificaciones
+        </button>
+        <button type="button" class="btn btn-light text-primary" (click)="testNotification()">
+          Probar notificación
+        </button>
+      </div>
+
+      <!-- Feedback accesible -->
+      <div class="visually-hidden" aria-live="polite">{{ notiStatus }}</div>
     </div>
   </header>
 
@@ -124,8 +137,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <p class="lead">
-            Esta Home está integrada con el layout del template Freelancer. En los próximos pasos
-            activaremos PWA offline, notificaciones y el deploy en GitHub Pages.
+            Esta Home integra el template Freelancer y ahora incluye notificaciones locales.
           </p>
         </div>
       </div>
