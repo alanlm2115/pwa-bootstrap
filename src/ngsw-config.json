@@ -5,7 +5,28 @@
       "name": "app",
       "installMode": "prefetch",
       "resources": {
-        "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "home-template",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/template/js/scripts.js",
+          "/assets/template/assets/img/avataaars.svg",
+          "/assets/template/assets/img/portfolio/cabin.png",
+          "/assets/template/assets/img/portfolio/cake.png",
+          "/assets/template/assets/img/portfolio/circus.png",
+          "/assets/template/assets/img/portfolio/game.png",
+          "/assets/template/assets/img/portfolio/safe.png",
+          "/assets/template/assets/img/portfolio/submarine.png"
+        ]
       }
     },
     {
@@ -13,7 +34,10 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": ["/assets/**", "/manifest.webmanifest"]
+        "files": [
+          "/assets/**",
+          "/manifest.webmanifest"
+        ]
       }
     }
   ]
